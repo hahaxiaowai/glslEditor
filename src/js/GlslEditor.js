@@ -1,4 +1,4 @@
-import 'document-register-element';
+// import 'document-register-element';
 import Shader from './core/Shader';
 import { initEditor, focusAll } from './core/Editor';
 
@@ -206,27 +206,27 @@ export default class GlslEditor {
             else {
                 content[(new Date().getTime()).toString()] = this.editor.getValue();
             }
-
-            if (this.options.menu) {
-                LocalStorage.setItem(STORAGE_LAST_EDITOR_CONTENT, JSON.stringify(content));
-            }
+            // 不再存储
+            // if (this.options.menu) {
+            //     LocalStorage.setItem(STORAGE_LAST_EDITOR_CONTENT, JSON.stringify(content));
+            // }
         });
+        // 判断不合理，如果上次使用后，这次传新的仍然会读取localStorage,这里不再读取
+        // if (this.options.menu) {
 
-        if (this.options.menu) {
-            // If there is previus content load it.
-            let oldContent = JSON.parse(LocalStorage.getItem(STORAGE_LAST_EDITOR_CONTENT));
-            if (oldContent) {
-                for (var key in oldContent) {
-                    this.open(oldContent[key], key);
-                }
-            }
-            else {
+            // let oldContent = JSON.parse(LocalStorage.getItem(STORAGE_LAST_EDITOR_CONTENT));
+            // if (oldContent) {
+            //     for (var key in oldContent) {
+            //         this.open(oldContent[key], key);
+            //     }
+            // }
+            // else {
                 this.new();
-            }
-        }
-        else {
-            this.new();
-        }
+            // }
+        // }
+        // else {
+        //     this.new();
+        // }
 
         if (this.options.menu || this.options.exportIcon) {
             // setup CrossStorage client
