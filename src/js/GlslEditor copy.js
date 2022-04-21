@@ -2,11 +2,11 @@
  * @Author: hhxy
  * @Date: 2022-04-21 23:14:11
  * @LastEditors: hhxy
- * @LastEditTime: 2022-04-21 23:27:52
+ * @LastEditTime: 2022-04-21 23:14:12
  * @Description:
  * @Optimization:
  */
-import 'document-register-element';
+// import 'document-register-element';
 import Shader from "./core/Shader";
 import { initEditor, focusAll } from "./core/Editor";
 
@@ -269,11 +269,10 @@ export default class GlslEditor {
   }
 
   new() {
-    const date = new Date();
+      console.log('new')
     this.setContent(
       this.options.frag || EMPTY_FRAG_SHADER,
-      // new Date().getTime().toString()
-      `${date.getMonth()+1}-${date.getDate()}   ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+      new Date().getTime().toString()
     );
     this.trigger("new_content", {});
     this.options.frag = null;
