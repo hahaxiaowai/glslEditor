@@ -1,5 +1,17 @@
 # [GlslEditor](https://github.com/patriciogonzalezvivo/glslEditor)
+## 克隆仓库更新说明
+### 2022-4-21
+1. 原仓库对localStorage的读取逻辑有一定的错误，于是修改了一下
+2. 增加是否使用缓存、加载缓存的开关
+3. 汉化
+4. 导出现在纯粹为导出为本地文件，去除分享链接一类功能
+5. 新建多个tag,不再使用时间戳
 
+
+## 其他说明
+原仓库已经很久了，使用的node版本还是8，如果你使用现在的node版本安装相关环境，多半是装不上，即便安装成功，无非是更新了引用库的版本，这就导致打包会出现问题（打包相关库版本跨度过大，有一些破坏性更改），我尝试过，但放弃了，于是用nvm安装了node 8的环境。
+
+本库为个人方便使用而更改。
 ![](http://patriciogonzalezvivo.com/images/glslEditor/00.gif)
 
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BQMKQJDQ9XH6)
@@ -30,7 +42,7 @@ And then you are ready to use it by passing an **DOM element** or **query select
     <div id="glsl_editor"></div>
 </body>
 <script type="text/javascript">
-    const glslEditor = new GlslEditor('#glsl_editor', { 
+    const glslEditor = new GlslEditor('#glsl_editor', {
         canvas_size: 500,
         canvas_draggable: true,
         theme: 'monokai',
