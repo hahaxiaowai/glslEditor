@@ -39,3 +39,7 @@
 .CodeMirror {
     margin-top: 12px;
 }
+#glsl_editor {
+    display: block;
+    height: 100%;
+}
