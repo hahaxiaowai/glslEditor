@@ -2,7 +2,7 @@
  * @Author: hhxy
  * @Date: 2022-04-21 23:14:11
  * @LastEditors: hhxy
- * @LastEditTime: 2022-04-24 00:37:25
+ * @LastEditTime: 2022-04-24 01:08:52
  * @Description:
  * @Optimization:
  */
@@ -107,13 +107,15 @@ class GlslEditor {
 
     // Default Context
     if (!this.options.frag) {
-      var innerHTML = this.container.innerHTML.replace(/&lt;br&gt;/g, "");
-      innerHTML = innerHTML.replace(/<br>/g, "");
-      innerHTML = innerHTML.replace(/&nbsp;/g, "");
-      innerHTML = innerHTML.replace(/&lt;/g, "<");
-      innerHTML = innerHTML.replace(/&gt;/g, ">");
-      innerHTML = innerHTML.replace(/&amp;/g, "&");
-      this.options.frag = innerHTML || EMPTY_FRAG_SHADER;
+      // var innerHTML = this.container.innerHTML.replace(/&lt;br&gt;/g, "");
+      // innerHTML = innerHTML.replace(/<br>/g, "");
+      // innerHTML = innerHTML.replace(/&nbsp;/g, "");
+      // innerHTML = innerHTML.replace(/&lt;/g, "<");
+      // innerHTML = innerHTML.replace(/&gt;/g, ">");
+      // innerHTML = innerHTML.replace(/&amp;/g, "&");
+      // this.options.frag = innerHTML || EMPTY_FRAG_SHADER;
+      // 不再接收dom元素内写shader，如果接收，这会使判断逻辑变得更加混乱，也会让使用者迷惑
+      this.options.frag = EMPTY_FRAG_SHADER;
 
       if (innerHTML) {
         this.container.innerHTML = "";
