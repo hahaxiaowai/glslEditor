@@ -2,7 +2,7 @@
  * @Author: hhxy
  * @Date: 2022-04-21 23:14:11
  * @LastEditors: hhxy
- * @LastEditTime: 2022-04-23 14:27:14
+ * @LastEditTime: 2022-04-24 00:37:25
  * @Description:
  * @Optimization:
  */
@@ -222,14 +222,14 @@ class GlslEditor {
       } else {
         content[new Date().getTime().toString()] = this.editor.getValue();
       }
-      if (this.menu.main.localStorage) {
+      if (this.menu?.main.localStorage) {
         LocalStorage.setItem(
           STORAGE_LAST_EDITOR_CONTENT,
           JSON.stringify(content)
         );
       }
     });
-    if (this.menu.main.localStorage) {
+    if (this.menu?.main.localStorage) {
       let oldContent = JSON.parse(
         LocalStorage.getItem(STORAGE_LAST_EDITOR_CONTENT)
       );

@@ -2,7 +2,7 @@
  * @Author: hhxy
  * @Date: 2022-04-23 14:01:24
  * @LastEditors: hhxy
- * @LastEditTime: 2022-04-23 15:04:13
+ * @LastEditTime: 2022-04-24 00:37:37
  * @Description:
  * @Optimization:
  */
@@ -14,8 +14,6 @@ import { uglify } from "rollup-plugin-uglify";
 import { obfuscator } from "rollup-obfuscator";
 import commonjs from "rollup-plugin-commonjs";
 
-const format = process.argv;
-console.log(format);
 export default {
   input: "./src/js/GlslEditor.js",
   output: [
