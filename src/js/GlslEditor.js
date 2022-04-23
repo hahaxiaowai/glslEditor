@@ -2,7 +2,7 @@
  * @Author: hhxy
  * @Date: 2022-04-21 23:14:11
  * @LastEditors: hhxy
- * @LastEditTime: 2022-04-21 23:27:52
+ * @LastEditTime: 2022-04-23 14:27:14
  * @Description:
  * @Optimization:
  */
@@ -54,7 +54,7 @@ void main() {
     gl_FragColor = vec4(color,1.0);
 }`;
 
-export default class GlslEditor {
+class GlslEditor {
   constructor(selector, options) {
     this.createFontLink();
     subscribeMixin(this);
@@ -421,6 +421,7 @@ export default class GlslEditor {
     this.pWindowOpen = false;
   }
 }
+export default GlslEditor
 
 window.GlslEditor = GlslEditor;
 
