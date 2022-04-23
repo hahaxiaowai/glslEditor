@@ -2,7 +2,7 @@
  * @Author: hhxy
  * @Date: 2022-04-13 23:54:06
  * @LastEditors: hhxy
- * @LastEditTime: 2022-04-23 15:21:09
+ * @LastEditTime: 2022-04-23 15:23:52
  * @Description:
  * @Optimization:
 -->
@@ -15,7 +15,7 @@
     <!-- Connect to server process -->
     <!-- <script>require('electron-connect').client.create()</script> -->
     <!-- end:build -->
-    <link type="text/css" rel="stylesheet" href="../build/glslEditor.css">
+    <link type="text/css" rel="stylesheet" href="./build/glslEditor.css">
     <!-- <script type="application/javascript" src="../build/glslEditor.js"></script> -->
   </head>
   <style>
@@ -32,7 +32,7 @@
   </body>
 
   <script type="module">
-    import  GlslEditor from '../build/glslEditor.es.js'
+    import  GlslEditor from './build/glslEditor.es.js'
     window.GlslEditor =GlslEditor
     window.Editor = new GlslEditor('#glsl_editor', {
       canvas_size: 500,
