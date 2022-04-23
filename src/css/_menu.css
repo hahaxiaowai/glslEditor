@@ -1,7 +1,7 @@
 /* MENU */
 
 .ge_menu_bar {
-    position: fixed;
+    position: absolute;
     width: 100%;
     margin: 0px;
     z-index: var(--z-menu);
