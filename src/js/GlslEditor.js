@@ -2,7 +2,7 @@
  * @Author: hhxy
  * @Date: 2022-04-21 23:14:11
  * @LastEditors: hhxy
- * @LastEditTime: 2022-04-24 01:08:52
+ * @LastEditTime: 2022-04-24 01:12:17
  * @Description:
  * @Optimization:
  */
@@ -117,9 +117,9 @@ class GlslEditor {
       // 不再接收dom元素内写shader，如果接收，这会使判断逻辑变得更加混乱，也会让使用者迷惑
       this.options.frag = EMPTY_FRAG_SHADER;
 
-      if (innerHTML) {
-        this.container.innerHTML = "";
-      }
+      // if (innerHTML) {
+      //   this.container.innerHTML = "";
+      // }
     }
 
     // Default invisible Fragment header

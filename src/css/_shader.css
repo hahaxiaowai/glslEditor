@@ -1,7 +1,7 @@
 /* CANVAS */
 
 .ge_canvas_container {
-    position: fixed;
+    position: absolute;
     right: 0px;
     margin: 0px;
     padding: 0px;
